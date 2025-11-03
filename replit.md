@@ -70,14 +70,13 @@ To test this mod:
 - TODO comments indicate areas for future implementation
 
 ## Recent Changes
-- 2025-11-03: **FIXED** GitHub Actions build failure (multiple fixes):
-  - Changed `setupDecompWorkspace` to `setupCIWorkspace` (anatawa12 fork uses different task names)
-  - Upgraded Gradle wrapper from 4.9 to 4.10.3 for better compatibility
-  - Replaced `net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT` with `com.anatawa12.forge:ForgeGradle:2.1-1.0.+`
-  - This is necessary because the original ForgeGradle 2.1-SNAPSHOT is no longer available (JCenter shut down August 2024)
-  - anatawa12's fork is a community-maintained version available on Maven Central
+- 2025-11-03: **FIXED** GitHub Actions build failure:
+  - The original ForgeGradle 2.1-SNAPSHOT IS still available on https://maven.minecraftforge.net
+  - Changed Gradle wrapper from 4.9 to 3.1 (recommended version for ForgeGradle 2.1)
+  - Added Sponge Maven repository for additional dependencies
+  - Updated Forge maven URL from HTTP to HTTPS (`https://maven.minecraftforge.net`)
   - Replaced deprecated `jcenter()` with `mavenCentral()`
-  - Updated Forge maven URL from HTTP to HTTPS
+  - Note: anatawa12's ForgeGradle fork doesn't support MC 1.8.9 (only 1.7.10 and 1.12.2)
 - 2025-11-03: Initial project setup with Forge 1.8.9 MDK
 - 2025-11-03: Implemented basic ChunkCacheManager with JSON caching
 - 2025-11-03: Implemented NoHitLagHandler with hurt time reduction
