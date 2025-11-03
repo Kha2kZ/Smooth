@@ -70,6 +70,19 @@ To test this mod:
 - TODO comments indicate areas for future implementation
 
 ## Recent Changes
+- 2025-11-03: **FIXED** GitHub Actions build failure by updating build.gradle:
+  - Replaced deprecated `jcenter()` with `mavenCentral()`
+  - Updated Forge maven URL from HTTP to HTTPS
+  - Added Sonatype snapshots repository for ForgeGradle
 - 2025-11-03: Initial project setup with Forge 1.8.9 MDK
 - 2025-11-03: Implemented basic ChunkCacheManager with JSON caching
 - 2025-11-03: Implemented NoHitLagHandler with hurt time reduction
+
+## Build Configuration
+This project uses GitHub Actions to build the mod automatically because Replit doesn't have Java 8 available. The build process:
+1. Pushes code to GitHub
+2. GitHub Actions automatically runs with Java 8
+3. Builds the mod JAR file
+4. Uploads the artifact for download
+
+See `.github/workflows/build.yml` for the automated build configuration.
