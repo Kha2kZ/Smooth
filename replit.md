@@ -70,10 +70,12 @@ To test this mod:
 - TODO comments indicate areas for future implementation
 
 ## Recent Changes
-- 2025-11-03: **FIXED** GitHub Actions build failure by updating build.gradle:
+- 2025-11-03: **FIXED** GitHub Actions build failure by using anatawa12's ForgeGradle fork:
+  - Replaced `net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT` with `com.anatawa12.forge:ForgeGradle:2.1-1.0.+`
+  - This is necessary because the original ForgeGradle 2.1-SNAPSHOT is no longer available (JCenter shut down August 2024)
+  - anatawa12's fork is a community-maintained version available on Maven Central
   - Replaced deprecated `jcenter()` with `mavenCentral()`
   - Updated Forge maven URL from HTTP to HTTPS
-  - Added Sonatype snapshots repository for ForgeGradle
 - 2025-11-03: Initial project setup with Forge 1.8.9 MDK
 - 2025-11-03: Implemented basic ChunkCacheManager with JSON caching
 - 2025-11-03: Implemented NoHitLagHandler with hurt time reduction
