@@ -1,0 +1,16 @@
+[
+{
+  "modid": "smoothmc",
+  "name": "SmoothMC",
+  "description": "Client-side optimization mod combining ChunkCache (reduces chunk reload stutter) and NoHitLag (removes hit lag spikes).",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SmoothMC Team"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

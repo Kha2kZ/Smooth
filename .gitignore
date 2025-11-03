@@ -1,0 +1,39 @@
+# Gradle
+.gradle/
+build/
+out/
+classes/
+
+# Eclipse
+*.launch
+.settings/
+.metadata/
+.classpath
+.project
+bin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+
+# Mac
+.DS_Store
+
+# Others
+run/
+*.log
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Forge
+eclipse/
+*.bat
