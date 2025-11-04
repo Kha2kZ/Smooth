@@ -92,3 +92,10 @@ This project uses GitHub Actions to build the mod automatically because Replit d
 4. Uploads the artifact for download
 
 See `.github/workflows/build.yml` for the automated build configuration.
+
+**Note**: No Replit workflow is configured because:
+- This is a Minecraft mod JAR file that requires Java 8 to build
+- Replit only has Java 19 available, which is incompatible with Forge 1.8.9
+- The compiled JAR file (`build/libs/SmoothMC-1.0.0.jar`) is meant to be placed in Minecraft's `.minecraft/mods/` folder
+- There is no runnable application to start on Replit - the mod runs inside Minecraft itself
+- All builds are handled by GitHub Actions with the correct Java 8 environment
