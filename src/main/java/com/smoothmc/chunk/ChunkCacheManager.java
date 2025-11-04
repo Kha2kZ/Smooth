@@ -38,7 +38,7 @@ public class ChunkCacheManager {
     @SubscribeEvent
     public void onChunkLoad(ChunkEvent.Load event) {
         if (event.world.isRemote) {
-            Chunk chunk = event.chunk;
+            Chunk chunk = event.getChunk();
             String chunkKey = getChunkKey(chunk.xPosition, chunk.zPosition);
             
             ChunkData cachedData = loadChunkFromCache(chunkKey);
@@ -58,7 +58,7 @@ public class ChunkCacheManager {
     @SubscribeEvent
     public void onChunkUnload(ChunkEvent.Unload event) {
         if (event.world.isRemote) {
-            Chunk chunk = event.chunk;
+            Chunk chunk = event.getChunk();
             String chunkKey = getChunkKey(chunk.xPosition, chunk.zPosition);
             
             // TODO: Extract block data from the chunk before creating ChunkData

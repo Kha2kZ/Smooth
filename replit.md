@@ -70,7 +70,10 @@ To test this mod:
 - TODO comments indicate areas for future implementation
 
 ## Recent Changes
-- 2025-11-03: **FIXED** GitHub Actions build failure:
+- 2025-11-04: **FIXED** Compilation error in ChunkCacheManager:
+  - Changed `event.chunk` to `event.getChunk()` in both onChunkLoad and onChunkUnload
+  - The chunk field is private in Minecraft 1.8.9's ChunkEvent, must use getter method
+- 2025-11-04: **FIXED** GitHub Actions build failure:
   - The original ForgeGradle 2.1-SNAPSHOT IS still available on https://maven.minecraftforge.net
   - Changed Gradle wrapper from 4.9 to 3.1 (recommended version for ForgeGradle 2.1)
   - Added Sponge Maven repository for additional dependencies
